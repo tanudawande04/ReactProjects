@@ -1,0 +1,59 @@
+.toggle-switch {
+    width: 70px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch.on {
+    background-color: #4caf50;
+    /* Green for ON */
+}
+
+.toggle-switch.off {
+    background-color: #f44336;
+    /* Red for OFF */
+}
+
+.switch {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-switch.on .switch {
+    left: 38px;
+    background-color: #2e7d32;
+    /* Darker green inside */
+}
+
+.toggle-switch.off .switch {
+    background-color: #c62828;
+    /* Darker red inside */
+}
+
+.switch-state {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.toggle-switch.on .switch-state {
+    color: white;
+}
+
+.toggle-switch.off .switch-state {
+    color: white;
+}
